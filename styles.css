@@ -16,16 +16,51 @@ body {
     /* Align text to the right */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Track (background) of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #004080;
+    /* Color of the scrollbar thumb (the draggable part) */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004080bf;
+    /* Hover color for the thumb */
+}
+
+
+/* For Firefox */
+
+scrollbar-width: thin;
+
+/* Use thin scrollbars in Firefox */
+
+scrollbar-color: #888 #f1f1f1;
+
+/* Set thumb and track colors */
+
 
 /* Header Styles */
 
 .header {
     background-color: #fff;
     color: #004080;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
     /* Reduced padding for a smaller header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Swap logo and navigation positions */
@@ -46,7 +81,7 @@ body {
     width: 150px;
     height: 70px;
     /* Maintain aspect ratio */
-    margin-left: 15px;
+    margin: 0 15px;
 }
 
 .site-title {
@@ -56,10 +91,16 @@ body {
     /* Prevent text wrapping */
 }
 
+nav {
+    position: absolute;
+    left: 15px;
+    top: 30px;
+}
+
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     /* Space between navigation items */
 }
 
@@ -165,6 +206,29 @@ section {
 
 .card:hover {
     background-color: #ffcc00;
+}
+
+.card i {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+
+/* Social Icons */
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
 }
 
 .card h3 {
