@@ -1,0 +1,367 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    direction: rtl;
+    /* Set the overall layout to RTL */
+    text-align: right;
+    /* Align text to the right */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Track (background) of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #004080;
+    /* Color of the scrollbar thumb (the draggable part) */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004080bf;
+    /* Hover color for the thumb */
+}
+
+
+/* For Firefox */
+
+scrollbar-width: thin;
+
+/* Use thin scrollbars in Firefox */
+
+scrollbar-color: #888 #f1f1f1;
+
+/* Set thumb and track colors */
+
+
+/* Header Styles */
+
+.header {
+    background-color: #fff;
+    color: #004080;
+    /* Reduced padding for a smaller header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Swap logo and navigation positions */
+}
+
+.header a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    /* Adjust logo and title alignment */
+}
+
+.logo {
+    width: 150px;
+    height: 70px;
+    /* Maintain aspect ratio */
+    margin: 0 15px;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+nav {
+    position: absolute;
+    left: 15px;
+    top: 30px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    /* Space between navigation items */
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: #004080;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #ffcc00;
+    color: #004080;
+}
+
+
+/* Landing Section */
+
+.landing {
+    position: relative;
+    background: url('../images/landing-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.landing-content {
+    z-index: 2;
+}
+
+.landing-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    margin-top: 30px;
+    background-color: #ffcc00;
+    color: #004080;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    transform: scale(1.1);
+}
+
+
+/* Section Styles */
+
+section {
+    margin: 15px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #030303;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #ffcc00;
+}
+
+.card i {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+
+/* Social Icons */
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #004080;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #000;
+}
+
+
+/* Contact Form */
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #ffcc00;
+    color: #004080;
+}
+
+
+/* Footer */
+
+.footer {
+    direction: rtl;
+    /* Ensures RTL text flow */
+    text-align: center;
+    /* Keeps content centered */
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+
+/* Isolate LTR Elements */
+
+.ltr-text {
+    direction: ltr;
+    /* Ensures proper display of LTR content */
+    unicode-bidi: embed;
+    /* Prevents mixing of RTL and LTR in one line */
+    display: inline-block;
+    /* Keeps spacing consistent */
+
+}
+/* Scroll to top button styling */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 20px; /* Larger size for better visibility */
+    color: #ffffff;
+    background: linear-gradient(145deg, #4e73df, #224ab1); /* Gradient background for a modern look */
+    border: none;
+    padding: 5px;
+    border-radius: 50%; /* Fully rounded button */
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for a floating effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1000;
+    opacity: 0.8; /* Slight transparency */
+    cursor: pointer; /* Shows it's clickable */
+  }
+  
+  /* Hover effect for the scroll button */
+  .scroll-to-top:hover {
+    background: linear-gradient(145deg, #4e73df, #3c5cb0); /* Lighter gradient on hover */
+    color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Larger shadow for a more dramatic floating effect */
+    opacity: 1; /* Full opacity when hovered */
+    transform: translateY(-4px); /* Slight lift effect */
+  }
+  
+  /* Active effect to simulate pressing */
+  .scroll-to-top:active {
+    transform: translateY(-2px); /* Slight depression effect when clicked */
+  }
+  
+
+  .scroll-to-top {
+    display: none;
+  }
+  
+  /* Show button when the user scrolls down */
+  body:has(:not(:target)) .scroll-to-top {
+    display: block;
+  }
