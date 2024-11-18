@@ -320,4 +320,48 @@ section {
     /* Prevents mixing of RTL and LTR in one line */
     display: inline-block;
     /* Keeps spacing consistent */
+
 }
+/* Scroll to top button styling */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 20px; /* Larger size for better visibility */
+    color: #ffffff;
+    background: linear-gradient(145deg, #4e73df, #224ab1); /* Gradient background for a modern look */
+    border: none;
+    padding: 5px;
+    border-radius: 50%; /* Fully rounded button */
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for a floating effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1000;
+    opacity: 0.8; /* Slight transparency */
+    cursor: pointer; /* Shows it's clickable */
+  }
+  
+  /* Hover effect for the scroll button */
+  .scroll-to-top:hover {
+    background: linear-gradient(145deg, #4e73df, #3c5cb0); /* Lighter gradient on hover */
+    color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Larger shadow for a more dramatic floating effect */
+    opacity: 1; /* Full opacity when hovered */
+    transform: translateY(-4px); /* Slight lift effect */
+  }
+  
+  /* Active effect to simulate pressing */
+  .scroll-to-top:active {
+    transform: translateY(-2px); /* Slight depression effect when clicked */
+  }
+  
+
+  .scroll-to-top {
+    display: none;
+  }
+  
+  /* Show button when the user scrolls down */
+  body:has(:not(:target)) .scroll-to-top {
+    display: block;
+  }
